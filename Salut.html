@@ -24,7 +24,7 @@
 					</div>				
 				</header>
 				
-		<section>
+			<section>
 				<nav>
 					<div class="navbar navbar-inverse">
 						<div class="container-fluid">
@@ -35,6 +35,12 @@
 							<ul class="nav navbar-nav">
 								<li> <a href="Salut.html">Présentation</a> </li>
 							</ul>
+							<form class="navbar-form navbar-right inline-form" action="" id="searchForm">
+								<div class="form-group">
+									<input type="search" class="input-sm form-control" placeholder="Recherche" id="searchField">
+									<button type="submit" class="btn btn-primary btn-sm"><span class="glyphicon glyphicon-eye-open"></span> Chercher</button>
+								</div>
+							</form>
 								
 
 						</div>
@@ -44,21 +50,29 @@
 	
 	
 	
-				<article>
-					 <div class="container">
-						<div class="row">
+					<article>
+						<div class="container">
+							<div class="row">
 							<div class="col-sm-3"><img src="images/ow.png" alt="logo" id="logo" /></div>
-							<div class="col-sm-6">
-								<h1>Bonjour.</h1> <br />
-									<p>Voici ma contribution à l'exercice de la partie 2 du cours sur Git et Github.</p>
-							</div> 
-							<div class="col-sm-3"><img src="images/tracer.png" alt="tracer" id="tracer" /></div>
+								<div class="col-sm-6">
+									<h1>Bonjour.</h1> <br />
+										<p>Voici ma contribution à l'exercice de la partie 2 du cours sur Git et Github.<img src="images/smiley.png" alt=smiley"></p>
+								</div> 
+								<div class="col-sm-3"><img src="images/tracer.png" alt="tracer" id="tracer" /></div>
+							</div>
 						</div>
-					</div>
 					
-				</article>
-		</section>		
-			</div>	
-		</div>		
+					</article>
+				</section>
+			</div>			
+		</div>	
+		
+<script src="https://code.jquery.com/jquery-1.12.3.min.js"></script>
+<script src="mon-script.js"></script>
+<script type="text/javascript">
+	$('#searchField').keyup(function() {
+	$("#searchForm").attr('action', "http://www.google.fr#safe=off&q=" + $(this).val());
+	})
+</script>		
 	</body>	
 </html>	
